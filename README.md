@@ -54,23 +54,4 @@ Cursos da [formação desenvolvedor Java](https://cursos.alura.com.br/formacao-j
 - [x] :pencil: Agendando tarefas com Scheduled do Spring
 - [ ] :tv: Alura Live #61 - Programação reativa com Spring 5
 
-### Projeto Formação Desenvolvedor Java
 
-## Outros Cursos
-
-- [x] Java e JDBC
-- [x] Spring Boot
-- [x] Java e JSTL
-- [x] EJB
-- [ ] Java e JSF I
-- [ ] Java e JSF 2 - II
-- [ ] Java e JSF 2 - III
-- [ ] Java EE parte 1
-- [ ] Java EE parte 2
-- [ ] Java EE parte 3
-
-## Outras carreiras
-
-- **Carreira Expert em Integrações de Aplicações com Java**
-- **Carreira Avançando na Plataforma Java**
-- **Carreira Expert em Orientação a Objetos com Java**
