@@ -7,7 +7,6 @@ Cursos da [formação desenvolvedor Java](https://cursos.alura.com.br/formacao-j
 
 ### Java e Orientação a Objetos
 
-- [x] Java Dominando as Collections
 - [x] Java parte 1
 - [x] Java parte 2
 - [x] Java parte 3
@@ -26,6 +25,7 @@ Cursos da [formação desenvolvedor Java](https://cursos.alura.com.br/formacao-j
 - [x] Java parte 7
 - [x] :pencil: Design Patterns no Java SE: o Template Method
 - [x] :pencil: Internacionalização no código Java
+- [x] :pencil: Java: Dominando as Collections
 - [x] :pencil: Conheça a nova API de datas do Java 8
 - [x] :tv: Conheça as novidades do Java 9
 - [x] :pencil: O mínimo que você deve saber de Java 10
