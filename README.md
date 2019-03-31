@@ -1,7 +1,4 @@
-
-# Cursos de Java
-
-## Formação Desenvolvedor Java
+# Formação Desenvolvedor Java
 
 Cursos da [formação desenvolvedor Java](https://cursos.alura.com.br/formacao-java), disponível na plataforma da Alura.
 
