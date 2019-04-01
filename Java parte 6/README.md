@@ -35,7 +35,7 @@ Este curso abordou os seguintes tópicos:
   * No caso da ArrayList podemos definir o tipo dos elementos através de generics <> .
   
 * Equals e mais listas
-  * Iplementar o método equals para definir a igualdade
+  * Implementar o método equals para definir a igualdade
   * O método equals é utilizado pelas listas
   * Existe mais uma lista, a java.util.LinkedList
   * A diferença entre ArrayList e LinkedList: 
