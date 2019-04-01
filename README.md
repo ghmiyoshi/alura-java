@@ -5,22 +5,23 @@ Cursos da [Formação Desenvolvedor Java](https://cursos.alura.com.br/formacao-j
 ### Java e Orientação a Objetos
 O primeiro passo é entender bem a linguagem Java, base de tudo que faremos nessa formação. E, para isso, é essencial desenvolver um conhecimento sólido em orientação a objetos e boas práticas de código.
 
-- [x] Java parte 1
-- [x] Java parte 2
-- [x] Java parte 3
+- [x] Java parte 1: Primeiros passos
+- [x] Java parte 2: Introdução à Orientação a Objetos
+- [x] Java parte 3: Entendendo herança e interface
 - [x] :pencil: Como não aprender Java e Orientação a Objetos: getters e setters
 - [x] :pencil: Revisitando a Orientação a Objetos: encapsulamento no Java
-- [x] Java parte 4
+- [x] Java parte 4: Entendendo exceções
 
 ### Bibliotecas Java
+Uma das grandes vantagens do Java é sua extensa biblioteca padrão multiplataforma. É essencial conhecer seus principais pacotes, como java.lang, I/O e coleções.
 
-- [x] Java parte 5
+- [x] Java parte 5: Pacotes e java.lang
 - [x] :pencil: Pegando partes de um texto no Java
 - [x] :pencil: Trocando caracteres de uma String no Java
-- [x] Java parte 6
+- [x] Java parte 6: Conhecendo o java.util
 - [x] :pencil: Diferença entre int e Integer em Java
 - [x] :pencil: Arredondando números no Java
-- [x] Java parte 7
+- [x] Java parte 7: Trabalhando com java.io
 - [x] :pencil: Design Patterns no Java SE: o Template Method
 - [x] :pencil: Internacionalização no código Java
 - [x] :pencil: Java: Dominando as Collections
