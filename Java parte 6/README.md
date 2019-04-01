@@ -2,6 +2,9 @@
 Conhecendo o java.util.
 
 ## Resumo
+A transformação do tipo primitivo para o objeto referência acontece automaticamente, e é chamada de autoboxing. O caminho inverso é chamado de unboxing.
+
+As classes que existem para cada tipo primitivo se chamam wrappers. Isso porque elas "embrulham" o tipo primitivo do objeto, que internamente guarda o valor primitivo. Elas existem para que haja compatibilidade com as coleções, nos permitindo, por exemplo, guardar números dentro de uma lista.
 
 ## Conclusão
 Este curso abordou os seguintes tópicos:
@@ -51,6 +54,15 @@ Este curso abordou os seguintes tópicos:
   * A interface java.util.Collection é a interface de todas as coleções;
   * As listas são sequências que aceitam elementos duplicados;
   * Os conjuntos (java.util.Set) também são coleções, mas não aceitam duplicados e nem são listas.
+  
+* As classes wrappers
+  * Para cada primitivo existe uma classe chamada Wrapper;
+  * Para guardar um primitivo numa coleção é preciso criar um objeto que embrulha o valor;
+  * A criação do objeto Wrapper é chamada de autoboxing;
+  * A retirada do valor primitivo do objeto Wrapper é chamada de unboxing;
+  * Autoboxing e unboxing acontecem automaticamente;
+  * As classes wrapper possuem vários métodos auxiliares, por exemplo para o parsing;
+  * Todas as classes wrappers que representam um valor numérico possuem a classe java.lang.Number como mãe.
 
 
   
