@@ -3,13 +3,14 @@
 Cursos da [Formação Desenvolvedor Java](https://cursos.alura.com.br/formacao-java), disponível na plataforma da Alura.
 
 ### Java e Orientação a Objetos
+O primeiro passo é entender bem a linguagem Java, base de tudo que faremos nessa formação. E, para isso, é essencial desenvolver um conhecimento sólido em orientação a objetos e boas práticas de código.
 
 - [x] Java parte 1
 - [x] Java parte 2
 - [x] Java parte 3
-- [x] Java parte 4
 - [x] :pencil: Como não aprender Java e Orientação a Objetos: getters e setters
 - [x] :pencil: Revisitando a Orientação a Objetos: encapsulamento no Java
+- [x] Java parte 4
 
 ### Bibliotecas Java
 
