@@ -55,7 +55,7 @@ public class TesteSort {
 		lista.sort(new TitularDaContaComparator());
 
 		// Collections.sort(lista, new TitularDaContaComparator());
-		// Collections.sort(lista);
+		Collections.sort(lista);
 		// Collections.reverse(lista);
 
 		for (Conta conta : lista) {
