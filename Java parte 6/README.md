@@ -63,6 +63,14 @@ Este curso abordou os seguintes tópicos:
   * Autoboxing e unboxing acontecem automaticamente;
   * As classes wrapper possuem vários métodos auxiliares, por exemplo para o parsing;
   * Todas as classes wrappers que representam um valor numérico possuem a classe java.lang.Number como mãe.
+  
+* Ordenação de listas
+  * Para ordenar uma lista é preciso definir um critério de ordenação;
+  * Há duas formas de definir um critério de ordenação:
+    * Pela interface Comparator;
+    * Pela interface Comparable (ordem natural).
+  * O algoritmo de ordenação já foi implementado na lista no método sort na classe Collections pelo método sort;
+  * A classe Collections é uma fachada com vários métodos auxiliares para trabalhar com as coleções, principalmente listas.
 
 
   
