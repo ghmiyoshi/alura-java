@@ -2,11 +2,11 @@
 Conhecendo o java.util.
 
 ## Resumo
-Introdução a arrays, a primeira estrutura de dados. Aprender a armazenar diversos valores de uma só vez e o que é um array de primitivos, inicializar o array indicando a posição desejada (sempre inicia do 0), acessar determinada posição e descobrir quantos elementos aquela lista é capaz de armazenar.
+Introdução a arrays, a primeira estrutura de dados. Aprender a armazenar diversos valores de uma só vez, o que é um array de primitivos, inicializar o array indicando a posição desejada (sempre inicia do 0), acessar determinada posição e descobrir quantos elementos é capaz de armazenar.
 
 Assim como existem primitivos, podem existir arrays de referências. Ao criar o objeto, o que é armazenado é a indicação à ele, e não ele em si. De resto, o funcionamento é igual ao tipo de array visto anteriormente.
 
-Um ponto negativo deste tipo de lista é seu número fixo de elementos, uma vez criada, ela terá aquele tamanho, sem possibilidade de alteração ou flexibilização. Além disso, apesar de ser possível saber esta capacidade de armazenamento, não há um método que permita descobrir o número de elementos armazenados.
+Um ponto negativo das arrays é seu número fixo de elementos, uma vez criada, ela terá aquele tamanho, sem possibilidade de alteração ou flexibilização. Além disso, apesar de ser possível saber esta capacidade de armazenamento, não há um método que permita descobrir o número de elementos armazenados.
 
 Por este motivo, foi criado um tipo de armazenador de objetos de referência, que é o ArrayList. Trata-se de uma classe que, internamente, utiliza um array. Sua sintaxe é, portanto, a mesma de uma classe qualquer. Além disso, é possível criar parâmetros nela, para indicar que só será possível armazenar um tipo de referência, por exemplo, do tipo Conta (generics). Ela possui diversos métodos específicos que facilitam o trabalho com estrutura de dados, é o caso do size(), que nos permite descobrir o número de referências armazenadas. 
 
