@@ -4,7 +4,7 @@ import java.util.List;
 public class TesteInteger {
 
 	public static void main(String[] args) {
-		int idade = 29;
+		int idade = 29; 
 
 		Integer idadeRef = Integer.valueOf(29); // autoboxing
 		System.out.println(idadeRef.intValue());
