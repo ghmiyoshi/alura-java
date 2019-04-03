@@ -1,12 +1,14 @@
 package br.com.banco.bytebank.modelo;
 
+import java.util.Comparator;
+
 /**
  * Classe que representa a "moldura" de uma conta.
  * 
  * @author hideki
  *
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
 	protected double saldo;
 	private int agencia;
 	private int numero;
@@ -102,6 +104,11 @@ public abstract class Conta {
 		}
 
 		return false;
+	}
+
+	@Override
+	public int compareTo(Conta conta) {
+		return Double.compare(this.saldo, conta.saldo);
 	}
 
 }
