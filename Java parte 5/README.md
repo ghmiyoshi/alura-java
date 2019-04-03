@@ -2,7 +2,7 @@
 Pacotes e java.lang
 
 ## Resumo
-
+Todas as classes trabalham com a regra de que a classe Object está no topo da hierarquia, sendo esta a classe mãe. Não é necessário escrever extends Object nas classes filhas como Cliente, pois o compilador insere essa informação automaticamente. A classe Object foi inventada a partir do conceito de que de que tudo é um objeto. Com isso, conseguimos algumas vantagens relacionadas à herança, como polimorfismo e reutilização de código. Nós vimos apenas um método, mas existem muitos outros que dependem da classe Object, vários laços foram escritos de forma dependente dessa classe, pois são utilizados alguns métodos básicos que já foram implementados dentro dessa classe, então todos as classes associadas à Object terão a mesma funcionalidade. A ideia do toString() da classe Object é ser sobrescrito, assim como a maioria dos outros métodos "querem" ser sobrescritos pelos filhos, com isso eles ganham mais significado. Existe um universo com muitas classes que que se baseiam em métodos definidos na classe Object, e o desenvolvedor deve sobrescrever tais métodos para atribuir maior significado a eles.
 
 ## Conclusão
 Este curso abordou os seguintes tópicos:
