@@ -5,7 +5,7 @@ Primeiros Passos.
 Apresentação dos primeiros passos para escrever e executar um programa simples com Java e Eclipse IDE.
 
 ## Conclusão
-Neste curso aprendi sobre as principais características da linguagem Java.
+Este curso abordou os seguintes tópicos:
 
 * O que é Java?
   * Principais características da linguagem Java:
