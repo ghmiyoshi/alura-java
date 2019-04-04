@@ -27,6 +27,17 @@ Este curso abordou os seguintes tópicos:
   * Uma solução para o unmodifiable list;
   * Stream do Java 8. 
   
+* O poder dos sets
+  * Uma nova coleção: Set;
+  * A implementação HashSet;
+  * Vantagens e desvantagens do Set;
+  * Mais sobre a interface Collection.
 
-
- 
+* Aplicando o Set no modelo
+  * Aplicação do Set no nosso modelo.
+  * Programação defensiva com conjuntos.
+  
+* Equals e hashcode
+  * Implementação das nossas próprias regras de comparação entre objetos de uma mesma classe.
+  * Sobrescrita do método equals.
+  * A necessidade de sobrescrever o método hashCode quando o equals for sobrescrito.
