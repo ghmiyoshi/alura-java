@@ -5,7 +5,7 @@ Conhecer a API de Collections.
 
 
 ## Conclusão
-Neste curso aprendi sobre as principais características da linguagem Java.
+Este curso abordou os seguintes tópicos:
 
 * Trabalhando com ArrayList
   * A implementação ArrayList;
