@@ -2,12 +2,15 @@ package br.com.alura;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Curso {
 	private String nome;
 	private String instrutor;
 	private List<Aula> aulas = new ArrayList<>();
+	private Set<Aluno> alunos = new HashSet<>();
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
@@ -45,6 +48,18 @@ public class Curso {
 	@Override
 	public String toString() {
 		return "Curso: " + this.nome + " tempo total: " + this.getTempoTotal() + " minutos" + "\naulas: " + this.aulas;
+	}
+
+	public void matricula(Aluno a1) {
+		this.alunos.add(a1);
+	}
+
+	public Set<Aluno> getAlunos() {
+		return Collections.unmodifiableSet(alunos);
+	}
+
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
 	}
 
 }
