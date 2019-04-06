@@ -2,7 +2,7 @@
 Conhecer a API de Collections.
 
 ## Resumo
-Uso da API de Collections. List e suas implementações ArrayList, Linkedlist e Vector, Set e suas implementações HashSet, LinkedHashSet e TreeSet e a interface Map.
+Uso da API de Collections. List e suas implementações ArrayList, LinkedList e Vector, Set e suas implementações HashSet, LinkedHashSet e TreeSet e a interface Map.
 
 ## Conclusão
 Este curso abordou os seguintes tópicos:
