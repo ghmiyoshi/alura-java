@@ -34,10 +34,15 @@ Este curso abordou os seguintes tópicos:
   * Mais sobre a interface Collection.
 
 * Aplicando o Set no modelo
-  * Aplicação do Set no nosso modelo.
+  * Aplicação do Set no nosso modelo;
   * Programação defensiva com conjuntos.
   
 * Equals e hashcode
-  * Implementação das nossas próprias regras de comparação entre objetos de uma mesma classe.
-  * Sobrescrita do método equals.
+  * Implementação das nossas próprias regras de comparação entre objetos de uma mesma classe;
+  * Sobrescrita do método equals;
   * A necessidade de sobrescrever o método hashCode quando o equals for sobrescrito.
+  
+* Mapas
+  * A interface Map;
+  * As implementações HashMap e LinkedHashMap;
+  * Vantagens e desvantagens do uso do Map.
