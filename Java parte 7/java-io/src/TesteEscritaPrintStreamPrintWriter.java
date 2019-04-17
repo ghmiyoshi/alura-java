@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class TesteEscritaPrintWriter {
+public class TesteEscritaPrintStreamPrintWriter {
 
 	public static void main(String[] args) throws IOException {
 
@@ -17,6 +17,7 @@ public class TesteEscritaPrintWriter {
 
 		// PrintStream pw = new PrintStream(new File("lorem2.txt"));
 		PrintWriter pw = new PrintWriter("lorem2.txt");
+		
 		pw.write("Teste\n");
 		pw.println("Teste Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
 		pw.println();
