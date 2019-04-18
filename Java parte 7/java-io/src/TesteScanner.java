@@ -8,28 +8,31 @@ public class TesteScanner {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		Scanner teclado = new Scanner(new File("contas.csv"));
-		
 
 		while (teclado.hasNextLine()) {
 			String linha = teclado.nextLine();
-			System.out.println(linha);
-			
-			
+//			System.out.println(linha);
+
 			Scanner linhaScanner = new Scanner(linha);
 			linhaScanner.useDelimiter(",");
 			linhaScanner.useLocale(Locale.US);
-			
-			String valor1 = linhaScanner.next();
-			int valor2 = linhaScanner.nextInt();
-			int valor3 = linhaScanner.nextInt();
-			String valor4 = linhaScanner.next();
-			double valor5 = linhaScanner.nextDouble();
-			
-			System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
-			
+
+			String tipoConta = linhaScanner.next();
+			int agencia = linhaScanner.nextInt();
+			int numero = linhaScanner.nextInt();
+			String titular = linhaScanner.next();
+			double saldo = linhaScanner.nextDouble();
+
+			System.out.format(new Locale("pt", "BR"), "%s - %04d-%08d , %20s , %08.2f %n", tipoConta, agencia, numero,
+					titular, saldo);
+
+			// System.out.println(tipoConta + agencia + numero + titular + saldo);
+
 //			String[] valores = linha.split(",");
 //			System.out.println(valores[3]);
-			
+
+			linhaScanner.close();
+
 		}
 
 		teclado.close();

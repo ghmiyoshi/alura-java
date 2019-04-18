@@ -16,11 +16,11 @@ public class TesteEscritaELeitura {
 
 		Socket socket = new Socket();
 
-		InputStream fip = socket.getInputStream(); // System.in; // new FileInputStream("lorem.txt");
+		InputStream fip = System.in; // socket.getInputStream(); // new FileInputStream("lorem.txt");
 		Reader is = new InputStreamReader(fip);
 		BufferedReader br = new BufferedReader(is);
 
-		OutputStream fos = socket.getOutputStream(); // System.out; // new FileOutputStream("lorem2.txt");
+		OutputStream fos = new FileOutputStream("lorem2.txt"); // System.out; // socket.getOutputStream(); 
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 

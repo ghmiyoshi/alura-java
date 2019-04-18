@@ -17,7 +17,7 @@ public class TesteEscritaPrintStreamPrintWriter {
 
 		// PrintStream pw = new PrintStream(new File("lorem2.txt"));
 		PrintWriter pw = new PrintWriter("lorem2.txt");
-		
+
 		pw.write("Teste\n");
 		pw.println("Teste Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
 		pw.println();
