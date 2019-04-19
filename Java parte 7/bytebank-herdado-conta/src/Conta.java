@@ -1,9 +1,10 @@
+import java.io.Serializable;
 
-public abstract class Conta {
+public abstract class Conta implements Serializable {
 	protected double saldo; 
 	private int agencia;
 	private int numero;
-	private Cliente titular;
+	private transient Cliente titular;
 	private static int total;
 
 	public Conta(int agencia, int numero) {
