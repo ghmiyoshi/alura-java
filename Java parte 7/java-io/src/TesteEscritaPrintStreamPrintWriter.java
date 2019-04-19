@@ -16,7 +16,7 @@ public class TesteEscritaPrintStreamPrintWriter {
 		// BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
 
 		// PrintStream pw = new PrintStream(new File("lorem2.txt"));
-		PrintWriter pw = new PrintWriter("lorem2.txt");
+		PrintWriter pw = new PrintWriter("lorem2.txt", "UTF-8");
 
 		pw.write("Teste\n");
 		pw.println("Teste Lorem Ipsum is simply dummy text of the printing and typesetting industry.");

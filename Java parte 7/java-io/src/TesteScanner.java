@@ -7,7 +7,7 @@ public class TesteScanner {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		Scanner teclado = new Scanner(new File("contas.csv"));
+		Scanner teclado = new Scanner(new File("contas.csv"), "UTF-8");
 
 		while (teclado.hasNextLine()) {
 			String linha = teclado.nextLine();
