@@ -6,7 +6,6 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 
 ## Comandos Maven
 * Cria o projeto
-
 ``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
 
 > **-DartifactId** Define o id nome do projeto
@@ -17,73 +16,80 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 >
 > **-DarchetypeArtifactId** Define qual o projeto base para montar esse projeto
 
+* Compila o projeto
 ``mvn compile``
 
-> Compila o projeto
+* Testa o projeto e gera um arquivo TXT e uma versão XML dos testes
+``mvn test``
 
-``mvn teste``
-
-> Roda as classes compiladas
-
+* Limpa o projeto (remove o diretório target)
 ``mvn clean``
 
-> Limpa o projeto (diretório target)
-
+* Gera um relatório html dos testes usando o plugin
 ``mvn surefire-report:report``
 
-> Gera o relatório utilizando o plugin
-
+* Empacota o projeto (.jar)
 ``mvn package``
-
-> Empacota o projeto
 > ``java -cp produtos-1.0-SNAPSHOT.jar br.com.alura.maven.App``
 
+* Atualiza as dependências para as últimas verões. Não é tão recomendado pela compatibilidade.
 ``mvn versions:use-latest-versions``
 
-> Atualiza as dependências para as últimas verões. Não é tão recomendado pela compatibilidade.
-
+* Dependências que possuem versões novas
 ``mvn versions:display-dependency-updates``
-
-> Dependências que possuem versões novas
 
 
 ## Ciclo do Build do Maven <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html>
 
-- validate
-- compile
-- test
-- package
-- integration-test
-- verify
-- install
-- deploy
+* validate: 
+  * Verificamos se projeto possui todas as informações necessárias.
 
-Sempre faz as fases anteriores.
+* compile:
+  * Compilar os conteúdos.
+  
+* test:
+  * Realizar testes diferentes no projeto.
+  
+* package:
+  * Geração de um pacote do projeto.
+  
+* integration-test:
+  * Realizar testes de integração.
+
+* verify:
+  * Checagem do pacote gerado.
+
+* install:
+  * Realizar a instalação do pacote no repositório local.
+
+* deploy:
+  * Realizar a implantação no ambiente adequado.
 
 ## Plugin PMD
 
-Plugin que gera um relatório que analise o código para encontrar falhas, como variáveis não utilizadas. Seu relatório fica sobre a pasta target/site
-
+* Plugin que gera um relatório que analisa o código para encontrar falhas, como variáveis não utilizadas. Seu relatório fica sobre a pasta target/site
 ``mvn pmd:pmd``
 
 ## Plugin JaCoCo
-
 ``mvn jacoco prepare-agent``
-
 ``mvn jacoco report``
 
 ## Jetty
-
+* Iniciar o servidor
 ``mvn jetty:run``
 
 ## Eclipse
+No eclipse, é possível indicar os goals que deseja executar, é só ir em "Run As" > "Maven build...". Indique um nome para essa configuração e quais goals deseja executar;
 
-No eclipse, é possível indicar os goals que deseja executar, é só ir em "Run As" > "Maven build...". Indique um nome para esse configuração e quais goals deseja executar.
+- O projeto estava com erro no index.jsp. Esse ero era da falta da dependência do HttpServlet no pom.xml. Ao adicionarmos a dependência que queremos, precisamos também atualizar o web.xml, pois ele descreve uma outra versão dessa Servlet;
 
-- O projeto estava com erro no index.jsp. Esse ero era da falta da dependencia do HttpServlet no pom.xml. Ao adicionarmos a dependência que queremos, precisamos também atualizar o web.xml, pois ele descreve uma outra versão dessa Servlet.
+- Tomar cuidado ao incluir dependências de projetos que estejam no Project Explorer, o eclipse irá adicionar como dependência o projeto e não o JAR. A vantagem é que as mudanças são refletidas na hora, porem classes de testes ficarão dispóniveis para serem utilizadas; 
 
-- **Para usar um projeto como dependência de outro, precisamos primeiro fazer um mvn install no projeto dependência. E só então referenciar esse pacote no pom.xml**
+- Para usar um projeto como dependência de outro, precisamos primeiro fazer um mvn install no projeto dependência para colocar no repositório local e só então referenciar esse pacote no pom.xml.
 
-- **Não devemos colocar a Servlet API na nossa lib, ou seja, como uma dependência normal, mas sim como uma dependência provided**, ou seja, ele irá pegar da raiz do nosso JVM. Com isso, é interessante dar um ``mvn clean`` antes do ``mvn package``
+## Escopos
+* O escopo **compile** indica que a dependência estará disponível em todos os classpaths: de compilação de teste e execução. Esse é o escopo padrão utilizado quando não declaramos um escopo na dependência.
 
-- O escopo **runtime** não é utilizado para compilação, somente para a execução do projeto
+* O escopo **provided** indica que precisamos da dependência para compilar e testar, mas não se faz necessário incluir a dependência no artefato final, pois o JDK ou o container irão disponibilizar a dependência. Um exemplo disso é a nossa API de Servlet, declarada como dependência na lojaweb. O container (Jetty) irá disponibilizar a implementação dessa API, portanto não é necessário que a biblioteca esteja disponível junto com o .war da projeto.
+
+* O escopo de **runtime** indica que a dependência não é necessária para compilar. A dependência estará disponível no classpath de runtime, o que significa que será utilizada na execução do projeto e também estará disponível no classpath de testes.
