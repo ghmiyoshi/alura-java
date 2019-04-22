@@ -8,7 +8,7 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 
 * Comandos Maven
     * Criar um projeto:
-      ``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
+``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
 
 > **-DartifactId** Define o id nome do projeto
 >
