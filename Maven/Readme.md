@@ -4,9 +4,11 @@ Build do zero a Web
 ## Resumo
 Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de um projeto no dia a dia, controlando desde a fase de compilação e criação dos diretórios até a geração de um arquivo .jar, executar um servidor com um aplicativo Web e dependência de outras bibliotecas, como resolver questões de conflito entre bibliotecas, como realizar o download de uma dependência, com a certeza de que temos todas as dependências necessárias, utilizar dois projetos, sendo que o primeiro envolverá a criação de um arquivo .jar e todo o procedimento de empacotamento e o segundo projeto gerará um arquivo .war.
 
-## Comandos Maven
+## Conclusão
 
-``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
+* Comandos Maven
+    * Criar um projeto:
+      *``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
 
 > **-DartifactId** Define o id nome do projeto
 >
