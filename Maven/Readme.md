@@ -16,7 +16,6 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 >
 > **-DarchetypeArtifactId** Define qual o projeto base para montar esse projeto
 
-
 * Compila o projeto:
 ``mvn compile``
 
@@ -40,7 +39,9 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 ``mvn versions:display-dependency-updates``
 
 
-## Ciclo do Build do Maven <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html> 
+## Ciclo do Build do Maven 
+<https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html> 
+
 * Verificamos se projeto possui todas as informações necessárias.
 ``validate``
 
