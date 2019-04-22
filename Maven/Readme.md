@@ -5,7 +5,7 @@ Build do zero a Web.
 Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de um projeto no dia a dia, controlando desde a fase de compilação e criação dos diretórios até a geração de um arquivo .jar, executar um servidor com um aplicativo Web e dependência de outras bibliotecas, como resolver questões de conflito entre bibliotecas, como realizar o download de uma dependência, com a certeza de que temos todas as dependências necessárias, utilizar dois projetos, sendo que o primeiro envolverá a criação de um arquivo .jar e todo o procedimento de empacotamento e o segundo projeto gerará um arquivo .war.
 
 ## Comandos Maven
-* Cria o projeto
+* Cria o projeto:
 ``mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart``
 
 > **-DartifactId** Define o id nome do projeto
@@ -16,58 +16,56 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 >
 > **-DarchetypeArtifactId** Define qual o projeto base para montar esse projeto
 
-* Compila o projeto
+* Compila o projeto:
 ``mvn compile``
 
-* Testa o projeto e gera um arquivo TXT e uma versão XML dos testes
+* Testa o projeto e gera um arquivo TXT e uma versão XML dos testes:
 ``mvn test``
 
-* Limpa o projeto (remove o diretório target)
+* Limpa o projeto (remove o diretório target):
 ``mvn clean``
 
-* Gera um relatório html dos testes usando o plugin
+* Gera um relatório html dos testes usando o plugin:
 ``mvn surefire-report:report``
 
-* Empacota o projeto (.jar)
+* Empacota o projeto (.jar):
 ``mvn package``
 > ``java -cp produtos-1.0-SNAPSHOT.jar br.com.alura.maven.App``
 
-* Atualiza as dependências para as últimas verões. Não é tão recomendado pela compatibilidade.
+* Atualiza as dependências para as últimas verões. Não é tão recomendado pela compatibilidade:
 ``mvn versions:use-latest-versions``
 
-* Dependências que possuem versões novas
+* Dependências que possuem versões novas:
 ``mvn versions:display-dependency-updates``
 
 
-## Ciclo do Build do Maven <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html>
+## Ciclo do Build do Maven <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html> 
+* Verificamos se projeto possui todas as informações necessárias.
+``validate``
 
-* validate: 
-  * Verificamos se projeto possui todas as informações necessárias.
+* Compilar os conteúdos.
+``compile``
 
-* compile:
-  * Compilar os conteúdos.
+* Realizar testes diferentes no projeto.
+``test`` 
+ 
+* Geração de um pacote do projeto:
+``package``
   
-* test:
-  * Realizar testes diferentes no projeto.
-  
-* package:
-  * Geração de um pacote do projeto.
-  
-* integration-test:
-  * Realizar testes de integração.
+* Realizar testes de integração:
+``integration-test``
 
-* verify:
-  * Checagem do pacote gerado.
+* Checagem do pacote gerado:
+``verify``
 
-* install:
-  * Realizar a instalação do pacote no repositório local.
+* Realizar a instalação do pacote no repositório local:
+``install``
 
-* deploy:
-  * Realizar a implantação no ambiente adequado.
+* Realizar a implantação no ambiente adequado: 
+``deploy``
 
 ## Plugin PMD
-
-* Plugin que gera um relatório que analisa o código para encontrar falhas, como variáveis não utilizadas. Seu relatório fica sobre a pasta target/site
+* Plugin que gera um relatório que analisa o código para encontrar falhas, como variáveis não utilizadas. Seu relatório fica sobre a pasta target/site:
 ``mvn pmd:pmd``
 
 ## Plugin JaCoCo
