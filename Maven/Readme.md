@@ -75,11 +75,11 @@ Utilizar o Maven para resolver diversos problemas do build e do gerenciamento de
 ``mvn jacoco report``
 
 ## Jetty
-- Iniciar o servidor
+- Iniciar o servidor:
 ``mvn jetty:run``
 
 ## Eclipse
-No eclipse, é possível indicar os goals que deseja executar, é só ir em "Run As" > "Maven build...". Indique um nome para essa configuração e quais goals deseja executar;
+- No eclipse, é possível indicar os goals que deseja executar, é só ir em "Run As" > "Maven build...". Indique um nome para essa configuração e quais goals deseja executar;
 
 - O projeto estava com erro no index.jsp. Esse ero era da falta da dependência do HttpServlet no pom.xml. Ao adicionarmos a dependência que queremos, precisamos também atualizar o web.xml, pois ele descreve uma outra versão dessa Servlet;
 
