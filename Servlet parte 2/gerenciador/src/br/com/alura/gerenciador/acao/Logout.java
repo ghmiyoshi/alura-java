@@ -5,23 +5,21 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import br.com.alura.gerenciador.dao.Banco;
+public class Logout implements Acao {
 
-public class RemoveEmpresa implements Acao{
-
+	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		System.out.println("Removendo empresa");
 
-		String paramId = request.getParameter("id");
-		Integer id = Integer.valueOf(paramId);
+		HttpSession sessao = request.getSession();
 
-		Banco dao = new Banco();
-		dao.removeEmpresa(id);
+//		sessao.removeAttribute("usuarioLogado");
 
-		return "redirect:entrada?acao=ListaEmpresas";
+		sessao.invalidate();
 
+		return "redirect:entrada?acao=LoginForm";
 	}
 
 }

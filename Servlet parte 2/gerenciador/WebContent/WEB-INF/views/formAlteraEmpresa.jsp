@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<c:url value="/alteraEmpresa" var="linkEntradaServlet" />
+<c:url value="/entrada" var="linkEntradaServlet" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,22 +15,30 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<c:import url="logout-parcial.jsp" />
+
 	<form action="${linkEntradaServlet}" method="POST">
 		<div class="form-group">
-			<label for="InputNome">Nome da Empresa</label> 
-			<input type="text" name="nome" value="${empresa.nome }" class="form-control" id="InputNome" style="width: 300px">
+			<label for="InputNome">Nome da Empresa</label> <input type="text"
+				name="nome" value="${empresa.nome }" class="form-control"
+				id="InputNome" style="width: 300px">
 		</div>
-		
+
 		<div class="form-group">
-			<label for="InputData">Data Abertura</label> 
-			<input type="text" name="data" value="<fmt:formatDate value="${empresa.data}" pattern="dd/MM/yyyy"/>" class="form-control" id="InputData" style="width: 300px">
+			<label for="InputData">Data Abertura</label> <input type="text"
+				name="data"
+				value="<fmt:formatDate value="${empresa.data}" pattern="dd/MM/yyyy"/>"
+				class="form-control" id="InputData" style="width: 300px">
 		</div>
-		
+
 		<div class="form-group">
-			<input type="hidden" name="id" value="${empresa.id }" class="form-control" id="InputId" style="width: 300px">
+			<input type="hidden" name="id" value="${empresa.id }"
+				class="form-control" id="InputId" style="width: 300px">
 		</div>
-		
-		<button type="submit" class="btn btn-primary" name="acao" value="AlteraEmpresa">Enviar</button>
+
+		<button type="submit" class="btn btn-primary" name="acao"
+			value="AlteraEmpresa">Enviar</button>
 	</form>
 </body>
 </html>

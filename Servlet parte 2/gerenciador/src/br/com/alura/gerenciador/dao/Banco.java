@@ -5,10 +5,12 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.com.alura.gerenciador.modelo.Empresa;
+import br.com.alura.gerenciador.modelo.Usuario;
 
 public class Banco {
 	private static Integer chaveSequencial = 1;
 	private static List<Empresa> lista = new ArrayList<>();
+	private static List<Usuario> listaUsuarios = new ArrayList<>();
 
 	static {
 		Empresa empresa = new Empresa();
@@ -21,6 +23,18 @@ public class Banco {
 
 		lista.add(empresa);
 		lista.add(empresa2);
+
+		Usuario usuario = new Usuario();
+		usuario.setLogin("gabriel");
+		usuario.setSenha("12345");
+
+		Usuario usuario2 = new Usuario();
+		usuario2.setLogin("hideki");
+		usuario2.setSenha("12345");
+
+		listaUsuarios.add(usuario);
+		listaUsuarios.add(usuario2);
+
 	}
 
 	public void adiciona(Empresa empresa) {
@@ -56,6 +70,15 @@ public class Banco {
 				return empresa;
 			}
 
+		}
+		return null;
+	}
+
+	public Usuario existeUsuario(String loginParam, String senhaParam) {
+		for (Usuario usuario : listaUsuarios) {
+			if (usuario.ehIgual(loginParam, senhaParam)) {
+				return usuario;
+			}
 		}
 		return null;
 	}

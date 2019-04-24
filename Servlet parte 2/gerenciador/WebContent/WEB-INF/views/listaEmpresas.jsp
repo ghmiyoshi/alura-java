@@ -13,13 +13,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<c:import url="logout-parcial.jsp"/>
+
+	Usuario logado: ${usuarioLogado.login }
+	</br>
+	</br>
 	
 	<ul class="list-group" style="width: 300px">
 		<li class="list-group-item active" align="center"><b>Lista de empresas</b></li>
 		<c:forEach var="empresa" items="${empresas}">
 			<li class="list-group-item"><strong>${empresa.nome }</strong> - <fmt:formatDate value="${empresa.data }" pattern="dd/MM/yyyy" />
-			<a href="/gerenciador/mostraEmpresa?id=${empresa.id }">Editar</a>
-			<a href="/gerenciador/removeEmpresa?id=${empresa.id }">Remover</a></li>
+			<a href="/gerenciador/entrada?acao=MostraEmpresa&id=${empresa.id }">Editar</a>
+			<a href="/gerenciador/entrada?acao=RemoveEmpresa&id=${empresa.id }">Remover</a></li>
 		</c:forEach>
 	</ul>
 

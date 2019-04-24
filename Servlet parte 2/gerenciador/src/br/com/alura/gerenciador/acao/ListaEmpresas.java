@@ -11,10 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.dao.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
-public class ListaEmpresas {
+public class ListaEmpresas implements Acao {
 
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
+	public String executa(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+
 		System.out.println("Listando empresas");
 
 		Banco dao = new Banco();
@@ -23,8 +24,7 @@ public class ListaEmpresas {
 
 		request.setAttribute("empresas", listaEmpresas);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas.jsp");
-		rd.forward(request, response);
+		return "forward:listaEmpresas.jsp";
 
 	}
 

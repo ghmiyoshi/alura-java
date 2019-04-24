@@ -6,22 +6,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.gerenciador.dao.Banco;
+public class LoginForm implements Acao {
 
-public class RemoveEmpresa implements Acao{
-
+	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		System.out.println("Removendo empresa");
-
-		String paramId = request.getParameter("id");
-		Integer id = Integer.valueOf(paramId);
-
-		Banco dao = new Banco();
-		dao.removeEmpresa(id);
-
-		return "redirect:entrada?acao=ListaEmpresas";
-
+		// TODO Auto-generated method stub
+		return "forward:formLogin.jsp";
 	}
 
 }
