@@ -22,7 +22,6 @@ Uma das grandes vantagens do Java é sua extensa biblioteca padrão multiplatafo
 - [x] :pencil: Diferença entre int e Integer em Java
 - [x] :pencil: Arredondando números no Java
 - [x] Java parte 7: Trabalhando com java.io
-- [x] :pencil: Design Patterns no Java SE: o Template Method
 - [x] :pencil: Internacionalização no código Java
 - [x] :pencil: Java: Dominando as Collections
 - [x] :pencil: Conheça a nova API de datas do Java 8
@@ -32,12 +31,14 @@ Uma das grandes vantagens do Java é sua extensa biblioteca padrão multiplatafo
 ### Servlets e Maven
 
 - [x] :pencil: Receba notificações da api de Servlet via Listeners
-- [x] Servlets
-- [x] Maven
+- [x] Maven: Build do zero a web
+- [x] Servlet parte 1: Fundamentos da programação web Java
+- [x] Servlet parte 2: Autenticação, autorização e o padrão MVC
+
 
 ### Banco de dados
 
-- [x] Java e JPA
+- [x] Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 - [x] :pencil: Entidades Managed, Transient e Detached no Hibernate e JPA
 - [x] :pencil: JPA com Hibernate: Herança e Mapeamentos
 - [x] Java e JPA: Otimizações com JPA2 e Hibernate
@@ -47,9 +48,9 @@ Uma das grandes vantagens do Java é sua extensa biblioteca padrão multiplatafo
 ### Spring MVC
 
 - [ ] :sound: Spring Framework – Hipsters #87
-- [x] Spring MVC I
+- [x] Spring MVC I: Criando aplicações web
 - [x] :pencil: Erros com JAXB no Java 9+
-- [x] Spring MVC II
+- [x] Spring MVC II: Integração, cache, segurança e templates
 - [x] :pencil: Agendando tarefas com Scheduled do Spring
 - [ ] :tv: Alura Live #61 - Programação reativa com Spring 5
 
