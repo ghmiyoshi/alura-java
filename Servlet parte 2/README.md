@@ -7,7 +7,7 @@ Construir uma aplicação usando os filtros e o conceito de controlador, dividir
 ## Conclusão
 Este curso abordou os seguintes tópicos:
 
-* Criando o Controlador
+### Criando o Controlador
   * Reorganizar a nossa aplicação em 3 pacotes: ação, modelo e servlet;
   * Criar uma servlet que recebe todas as requisições da aplicação;
   * Centralizar o acesso em uma servlet, para que ela decida qual ação executar.
