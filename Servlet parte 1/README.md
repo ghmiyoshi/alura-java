@@ -2,17 +2,7 @@
 Fundamentos da programação web Java
 
 ## Resumo
-Foi desenvolvido um sistema de CRUD básico de empresas.
-
-* Tecnologias, ferramentas e padrões utilizados:
-
-	* IDE Eclipse;
-	* Apache Tomcat;
-	* Java Web;
-	* JSTL e EL;
-	* HTML5;
-	* CSS3;
-	* BootStrap.
+Aprender o que o Tomcat realiza com Servlet, como fazer o mapeamento do protocolo HTTP para as chamadas, requisições e como devolver respostas. Discutir sobre a organização de uma aplicação: como mudar a chamada para um modelo e como criar visualizações HTML no navegador. Falaremos ainda sobre JSP, Expression Language, Tag Libs, e o modelo por trás dos despachadores de requisições e redirecionamento.
 
 ## Conclusão
 Este curso abordou os seguintes tópicos:
