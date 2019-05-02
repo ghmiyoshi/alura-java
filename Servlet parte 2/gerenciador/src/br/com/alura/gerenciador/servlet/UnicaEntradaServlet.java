@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.alura.gerenciador.acao.Acao;
 
-@WebServlet("/entrada")
+//@WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -23,17 +23,6 @@ public class UnicaEntradaServlet extends HttpServlet {
 
 		String paramAcao = request.getParameter("acao");
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
-		HttpSession sessao = request.getSession();
-		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
-		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
-
-		System.out.println("Usuario não esta logado " + usuarioNaoEstaLogado);
-		System.out.println("Ação protegida " + ehUmaAcaoProtegida);
-
-		if (ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
-			response.sendRedirect("entrada?acao=LoginForm");
-			return;
-		}
 
 		System.out.println(nomeDaClasse);
 
