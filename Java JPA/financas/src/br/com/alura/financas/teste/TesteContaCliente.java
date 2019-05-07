@@ -9,6 +9,7 @@ import br.com.alura.financas.util.JPAUtil;
 public class TesteContaCliente {
 
 	public static void main(String[] args) {
+		
 		Cliente cliente = new Cliente();
 		cliente.setNome("Leonardo");
 		cliente.setEndereco("Rua fulano, 123");
@@ -29,7 +30,7 @@ public class TesteContaCliente {
 		manager.getTransaction().begin();
 
 		manager.persist(cliente);
-//		manager.persist(cliente2);
+//		manager.persist(cliente2); Impossivel persistir clientes com a mesma conta
 
 		manager.getTransaction().commit();
 		manager.close();

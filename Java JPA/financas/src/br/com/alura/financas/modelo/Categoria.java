@@ -13,7 +13,7 @@ public class Categoria {
 	private Integer id;
 	private String nome;
 
-	@Deprecated
+	@Deprecated // Não deve ser utilizado esse construtor. Somente o Hibernate que irá utilizar 
 	public Categoria() {
 
 	}

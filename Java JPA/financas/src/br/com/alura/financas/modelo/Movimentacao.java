@@ -12,19 +12,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
+@NamedQuery(query="SELECT AVG(m.valor) FROM Movimentacao m WHERE m.conta = :pConta" + " AND m.tipo = :pTipo"
+		+ " GROUP BY DAY(m.data), month(m.data), year(m.data)", name="MediasPorDiaETipo") // Recurso da JPA que permite declarar uma query identificando com um nome e, depois, referenciar quando for utilizar
 public class Movimentacao {
-
-	public List<Categoria> getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(List<Categoria> categoria) {
-		this.categoria = categoria;
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,18 +27,19 @@ public class Movimentacao {
 
 	private BigDecimal valor;
 
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) // Indica que é um ENUM
 	private TipoMovimentacao tipo;
 
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP) // TIMESTAMP salva a data e o horário
 	private Calendar data;
 
 	private String descricao;
 
-	@ManyToOne
+	@ManyToOne // Parte forte do relacionamento de movimentacoes da conta, cria o conta_id
 	private Conta conta;
 
-	@ManyToMany
+	@ManyToMany // Muitos para muitos para poder reutilizar uma mesma categoria em uma outra
+				// movimentacao
 	private List<Categoria> categoria;
 
 	public Conta getConta() {
@@ -92,6 +88,19 @@ public class Movimentacao {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public List<Categoria> getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(List<Categoria> categoria) {
+		this.categoria = categoria;
+	}
+
+	@Override
+	public String toString() {
+		return "Descrição: " + descricao;
 	}
 
 }

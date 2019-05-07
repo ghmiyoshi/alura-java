@@ -13,6 +13,7 @@ import br.com.alura.financas.util.JPAUtil;
 public class TesteJPARelacionamento {
 
 	public static void main(String[] args) {
+		
 		Conta conta = new Conta();
 		conta.setAgencia("0123");
 		conta.setBanco("Bradesco");

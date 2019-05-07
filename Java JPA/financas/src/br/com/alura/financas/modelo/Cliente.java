@@ -17,7 +17,7 @@ public class Cliente {
 	private String profissao;
 	private String endereco;
 
-	@JoinColumn(unique=true)
+	@JoinColumn(unique=true) // Faz com que a conta seja somente de um Cliente. Funciona somente na hora da criação do schema
 	@OneToOne
 	private Conta conta;
 

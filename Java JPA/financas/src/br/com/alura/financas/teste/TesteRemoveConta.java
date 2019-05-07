@@ -17,16 +17,13 @@ public class TesteRemoveConta {
 		conta.setAgencia("456");
 
 		EntityManager em = new JPAUtil().getEntityManager();
-
 		em.getTransaction().begin();
 		
-		conta = em.find(Conta.class, 1);	
-		em.remove(conta);
+		conta = em.find(Conta.class, 1); 	
+		em.remove(conta); // Remove conta
 		
 		em.getTransaction().commit();
-
 		em.close();
-
 	}
 
 }
