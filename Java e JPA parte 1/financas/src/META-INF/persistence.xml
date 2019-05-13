@@ -1,0 +1,38 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	
+	<!-- unidade de persistência com o nome financas -->
+	<persistence-unit name="financas">
+	
+		<!-- Implementação do JPA, no caso Hibernate -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<!-- Aqui são listadas todas as entidades que serão gerenciadas pela JPA -->
+		<class>br.com.caelum.financas.modelo.Conta</class>
+		<class>br.com.caelum.financas.modelo.Movimentacao</class>
+		<class>br.com.caelum.financas.modelo.Categoria</class>
+		<class>br.com.caelum.financas.modelo.Cliente</class>
+		
+		<properties>
+			<!-- Propriedades JDBC -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/financas" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="Etec1517@" />
+			
+			<!-- Configurações específicas do Hibernate -->
+			<!-- Dialeto SQL do MySQL -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			
+			<!-- Cria as tabelas caso não exista se não atualiza -->	
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<!--  Permite ver as querys que foram executadas no console -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+		
+	</persistence-unit>
+</persistence>
